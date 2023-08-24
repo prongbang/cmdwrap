@@ -18,7 +18,7 @@ async fn warp() -> shuttle_warp::ShuttleWarp<(impl Reply, )> {
         .and(warp::query::query())
         .and(warp::body::bytes())
         .and_then(handle_request)
-        .with(warp::cors::cors().allow_any_origin());
+        .with(warp::cors::cors().allow_any_origin().allow_methods(vec!["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]));
 
     let boxed = route.boxed();
 
