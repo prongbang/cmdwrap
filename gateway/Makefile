@@ -7,6 +7,9 @@ run:
 deploy:
 	cargo shuttle deploy --allow-dirty
 
+start:
+	cargo shuttle project start
+
 test:
 	curl -X GET http://127.0.0.1:8000/get?id=1
 	curl -X POST http://127.0.0.1:8000/post -H "Content-Type: application/json" -d '{"key": "value"}'
