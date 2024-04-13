@@ -1,8 +1,10 @@
 # cmdwrap
 
-How to use:
+Command for run shell script.
 
-- synchronous
+### How to use:
+
+- Synchronous
 
 ```rust
 let command = "pwd";
@@ -16,7 +18,7 @@ match cmdwrap::run(command) {
 }
 ```
 
-- asynchronous
+- Asynchronous
 
 ```rust
 use futures_util::pin_mut;
